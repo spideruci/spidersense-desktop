@@ -26,7 +26,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">The Brain</a>
+      <span class="navbar-brand">Spider Sense</span>
+      <span class="navbar-brand">Cerebro</span>
+      <!-- <a class="navbar-brand" href="#">The Brain</a> -->
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -71,65 +73,65 @@
     Remove Node-Colors
   </button>
 
+  <div id="classlist" class="classlist"></div>
+  <div id="methodlist" class="methodlist"></div>
 
-
-  <div class="checkbox">
+  <div class="checkbox invisible">
     <label>
       <input type="checkbox" name="lock_trans" value="hold" onchange="lock_transformation(this)" > Freeze Layout
     </label>
   </div>
 
-  <div class="label label-default">Select Execution to Replay</div>
+  <div class="label label-default invisible">Select Execution to Replay</div>
 
-  <select id="execution-selector" onchange="change_execution(this.value)" class="form-control" style="margin-top:5px;"></select>
+  <select class="invisible" id="execution-selector" onchange="change_execution(this.value)" class="form-control" style="margin-top:5px;"></select>
   <br/>
 
   <!-- <input type="checkbox" name="lock_trans" value="hold" onchange="lock_transformation(this)" > Lock Transformation<br> -->
 
   <br/>
 
-  <button type="button" class="btn btn-success" onclick="traceViz()" disabled title="Visualize Execution From Start">
+  <button type="button" class="btn btn-success invisible" onclick="traceViz()" disabled title="Visualize Execution From Start">
     <span name="visualize_trace" aria-hidden="true" title="Visualize Execution From Begining">Visualize Execution</span>
   </button>
   <br/>
   <br/>
 
-  <button type="button" class="btn btn-success" onclick="blink3()" disabled title="Play Execution From Start">
-    <span class="glyphicon glyphicon-off" name="begin_execution" aria-hidden="true" title="Play Execution From Begining"></span>
+  <button type="button" class="btn btn-success invisible" onclick="blink3()" disabled title="Play Execution From Start">
+    <span class="glyphicon glyphicon-off invisible" name="begin_execution" aria-hidden="true" title="Play Execution From Begining"></span>
   </button>
 
-  <button type="button" class="btn btn-warning" onclick="playpause()" disabled title="Pause/Resume Execution">
-    <span class="glyphicon glyphicon-pause" aria-hidden="true" name="playpause" title="Play"/>
+  <button type="button" class="btn btn-warning invisible" onclick="playpause()" disabled title="Pause/Resume Execution">
+    <span class="glyphicon glyphicon-pause invisible" aria-hidden="true" name="playpause" title="Play"/>
   </button>
   <!-- <span class="label label-default">Execution Status:</span> -->
-  <span name="playstate" style="font-size: 13px;font-family: Arial;margin-bottom:15px;"></span>
+  <span name="playstate" class="invisible" style="font-size: 13px;font-family: Arial;margin-bottom:15px;"></span>
   <br/>
 
-  <span class="label label-default">Program-Execution Time Slider</span>
-  <span id="messages" class="label label-default"></span>
-  <input name="slider" class="slider" type="range" style="margin-top:5px;" min="0" value="0" step="1" onchange="slide(this.value)" />
-
-  <br/>
-
-  <span class="label label-default">Slowdown:</span>
-  <span name="slowdownvalue" style="font-size: 13px;font-family: Arial;margin-bottom:15px;"></span>
-  <input name="slowdown" class="slowdown" style="margin-top:5px;" type="range"  min="1" max="201" value="1" step="10" onchange="slowdown(this.value)" /> <br/>
-
-
-  <button style="margin-bottom:10px;" type="button" class="btn btn-default btn-sm" colored="1" onclick="select_colored()" disabled>Select Colored Nodes</button>
-  <br/>
-
-  <div class="label label-default">Node Selection History</div>
-  <select id="selection-history" onchange="show_selection(value)" class="form-control" style="margin-top:5px;"> </select>
+  <span class="label label-default invisible">Program-Execution Time Slider</span>
+  <span id="messages" class="label label-default invisible"></span>
+  <input name="slider" class="slider invisible" type="range" style="margin-top:5px;" min="0" value="0" step="1" onchange="slide(this.value)" />
 
   <br/>
 
-  <div class="label label-default">Current Node Selection</div>
+  <span class="label label-default invisible">Slowdown:</span>
+  <span name="slowdownvalue" class="invisible" style="font-size: 13px;font-family: Arial;margin-bottom:15px;"></span>
+  <input name="slowdown" class="slowdown invisible" style="margin-top:5px;" type="range"  min="1" max="201" value="1" step="10" onchange="slowdown(this.value)" /> <br/>
+
+
+  <button style="margin-bottom:10px;" type="button" class="btn btn-default btn-sm invisible" colored="1" onclick="select_colored()" disabled>Select Colored Nodes</button>
+  <br/>
+
+  <div class="label label-default invisible">Node Selection History</div>
+  <select id="selection-history" onchange="show_selection(value)" class="invisible form-control" style="margin-top:5px;"> </select>
 
   <br/>
 
-  <div id="classlist" class="classlist"></div>
-  <div id="methodlist" class="methodlist"></div>
+  <div class="label label-default invisible">Current Node Selection</div>
+
+  <br/>
+
+
 
 </div>
 
@@ -183,8 +185,8 @@
       <option value="tetris-dv1-sdg-springbox">tetris-dv1-sdg</option>
 
     </select>
-    <span class="label label-default" >Current Executing Instruction</span><br/>
-    <div class="sourcecode" name="curr_insn"></div>
+    <!-- <span class="label label-default" >Current Executing Instruction</span><br/>
+    <div class="sourcecode" name="curr_insn"></div> -->
   </div>
 
   <!-- <input type="text" style="border-style: none; width: 150px;" name="state" readonly="readonly" value="Loading ... please wait."> -->

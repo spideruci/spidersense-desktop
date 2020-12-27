@@ -1,3 +1,7 @@
+.invisible {
+  visibility: collapse;
+}
+
 .node {
   fill: #fff;
   stroke: #fff;
